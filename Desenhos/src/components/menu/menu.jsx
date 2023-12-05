@@ -1,4 +1,6 @@
 import './menu.css'
+import'./button.scss'
+import Desenhos from './../Desenhos/desenhos'
 import japan from './../../Img/ilustracao-japonesa-desenhada-a-mao-de-flores-de-cerejeira_23-2149601808-PhotoRoom 1.png'
 import grup1 from './../../Img/Group 13885.png'
 import japan2 from './../../Img/ilustracao-japonesa-desenhada-a-mao-de-petalas-de-cerejeira_23-2149601832-PhotoRoom 1.png'
@@ -6,8 +8,11 @@ import grup2 from './../../Img/Group 13883.png'
 import japan3 from './../../Img/7691984-PhotoRoom 1.png'
 import girl from './../../Img/286696717_131549379278777_4742352255574198065_n (1) (1) 1.png'
 import grup3 from './../../Img/Group 13888.png'
+import Body  from '../Cards/Card'
 
-function Menu() {
+import { Link } from 'react-router-dom';
+
+const Menu = () => {
   
 
     return (
@@ -22,10 +27,23 @@ function Menu() {
                 <img src={japan3} className='japan3'/>
                 <img src={grup3} className='grup3'/>
   <div className="container">
+    <br />
+    <br /><br /><br /><br /><br />
     <h1>Desenhos</h1>
     <p className='p'>Meus principais desenhos</p>
+
+  
   </div>
 </div>
+
+<div className="center-center">
+ 
+  <Link className="btn-glitch-fill" to="/desenhos">
+    <span className="text">/ Initialize</span><span className="text-decoration">_</span><span className="decoration">&rArr;</span>
+    </Link>
+</div>
+<hr className="accessory"></hr>
+<Body/>
       </>
     )
   }

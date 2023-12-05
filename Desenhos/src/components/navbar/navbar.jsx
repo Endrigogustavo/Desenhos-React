@@ -1,6 +1,6 @@
 
 import './navbar.css'
-
+import { Link } from 'react-router-dom';
 
 function Menu() {
   
@@ -10,12 +10,11 @@ function Menu() {
 
 <nav className="nav">
   <div className="container">
-    <h1 className="logo"><a href="#"><i className="fa-solid fa-moon"></i> My Website</a></h1>
     <ul>
-      <li><a href="#" className="current">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><Link to="/" className="current">Home</Link></li>
+      <li><Link to="/desenhos" className="menu">Desenhos</Link></li>
+      <li><Link to="/" className="menu">Sobre</Link></li>
+      <li><Link to="/" className="menu">Outros</Link></li>
     </ul>
   </div>
 </nav>

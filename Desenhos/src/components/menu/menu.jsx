@@ -32,7 +32,7 @@ const Menu = () => {
     <h1>Desenhos</h1>
     <p className='p'>Meus principais desenhos</p>
 
-  
+    <div className="grad"></div>
   </div>
 </div>
 
@@ -42,7 +42,8 @@ const Menu = () => {
     <span className="text">/ Initialize</span><span className="text-decoration">_</span><span className="decoration">&rArr;</span>
     </Link>
 </div>
-<hr className="accessory"></hr>
+
+
 <Body/>
       </>
     )

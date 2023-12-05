@@ -2,3 +2,4 @@ https://github.com/doutorwaka/gerenciador-filmes-react/tree/main/src
 https://www.youtube.com/watch?v=F8bViAG_-zY
 
 npm install react-router-dom
+npm install react-bootstrap bootstrap

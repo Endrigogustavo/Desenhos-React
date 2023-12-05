@@ -1,6 +1,6 @@
 :root {
-    --card-height: 300px;
-    --card-width: calc(var(--card-height) / 1.5);
+    --card-height: 100%;
+    --card-width: calc(var(--card-height) / 1.4);
   }
   * {
     box-sizing: border-box;
@@ -13,15 +13,17 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding: 0 36px;
+    padding: 0 50px;
     perspective: 2500px;
     margin: 0 50px;
+    border-radius: 20px;
   }
   
   .cover-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
   }
   
   .wrapper {
@@ -36,6 +38,7 @@
     box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
   }
   
   .wrapper::before,
@@ -75,10 +78,10 @@
   }
   
   .card:hover .wrapper::after {
-    height: 120px;
+    height: 200px;
   }
   .title {
-    width: 100%;
+    width: 250%;
     transition: transform 0.5s;
   }
   .card:hover .title {
@@ -86,7 +89,7 @@
   }
   
   .character {
-    width: 100%;
+    width: 130%;
     opacity: 0;
     transition: all 0.5s;
     position: absolute;
@@ -99,35 +102,128 @@
   }
   
 
-  .Grid {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #EAECF8;
-    &-item {
-      width: 100%;
-     
-      margin-top: 2%;
-      
-      @media (min-width: 48rem) {
-        width: 49%;
-        &:nth-child(odd) {
-          
-          margin-right: 2%;
-        }
-      }
-      
-      @media (min-width: 62rem) {
-        width: 23.5%;
-        &:not(:nth-child(4n)) {
-          
-          margin-right: 2%;
-        }
-      }
-      
-      &:before {
-        content: "";
-        float: left;
-        padding-top: 100%;
-      }
-    }
-  }
+
+  
+.texto{
+width: 100%;
+height: 100px;
+background-color: #181A20;
+
+}
+
+h1 {
+  color: #ffffff;
+  font-size:35px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  transform: translateZ(35px);
+  margin-left: 100px;
+
+  
+}
+
+h3 {
+  color: brown;
+  font-size: 25px;
+  transform: translateZ(25px);
+  margin-left: 100px;
+  
+}
+
+
+/*
+
+All grid code is placed in a 'supports' rule (feature query) at the bottom of the CSS (Line 77). 
+        
+The 'supports' rule will only run if your browser supports CSS grid.
+
+Flexbox is used as a fallback so that browsers which don't support grid will still recieve an identical layout.
+
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+:root {
+	/* Base font size */
+	font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.containerr {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+  background-color: #181A20;
+}
+
+.heading {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 1.5;
+
+	padding: 3.5rem 0;
+	color: #ffffff;
+}
+
+.heading span {
+	display: block;
+  color: brown;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+}
+
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+  width: 250px;
+	height: 400px;
+
+  
+}
+
+.gallery-image {
+	display: block;
+	width: 250px;
+	height: 400px;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+}
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
+}

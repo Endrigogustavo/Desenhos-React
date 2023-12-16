@@ -13,10 +13,11 @@
 [class*="btn-glitch-"] {
   display: inline-block;
   font-family: "VT323", monospace;
+  font-size: medium;
   border: 1px solid #03223f;
   color: #03223f;
   padding: 10px 13px;
-  min-width: 175px;
+  min-width: 235px;
   line-height: 1.5em;
   white-space: no-wrap;
   text-transform: uppercase;
@@ -32,9 +33,9 @@
   &:hover, &:focus {
     animation-name: glitch;
     animation-duration: 0.2s;
-    background-color: yellow;
+    background-color: rgb(170, 27, 27);
     color:black;
-    border: 1px solid yellow;
+    border: 1px solid rgb(90, 11, 15);
     .text-decoration {
       animation-name: blink;
       animation-duration: 0.1s;

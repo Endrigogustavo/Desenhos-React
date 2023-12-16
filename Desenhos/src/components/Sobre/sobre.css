@@ -9,7 +9,7 @@ section h2 {
 
 section.success {
     color: #fff;
-    background: #d4d4d4;
+    background: #EAECF8;
 }
 
 /* seuarquivo.css */
@@ -19,8 +19,8 @@ section.success {
     line-height: 1.5;
     color:#010d23; /* Escolha a cor de texto desejada */
     /* Adicione mais estilos conforme necessário */
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 100px;
+    margin-right: 100px;
   }
 
   h2{
@@ -30,3 +30,6 @@ section.success {
     color:#010d23;
   }
   
+  .margem{
+    margin-left: 10px;
+  }

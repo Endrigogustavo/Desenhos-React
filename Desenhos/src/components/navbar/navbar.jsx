@@ -12,7 +12,7 @@ function Menu() {
   <div className="container">
     <ul>
       <li><Link to="/" className="current">Home</Link></li>
-      <li><Link to="/desenhos" className="menu">Desenhos</Link></li>
+      <li><Link to="/" className="menu">Desenhos</Link></li>
       <li><Link to="/" className="menu">Sobre</Link></li>
       <li><Link to="/" className="menu">Outros</Link></li>
     </ul>

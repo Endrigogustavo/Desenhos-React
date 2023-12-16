@@ -1,6 +1,5 @@
 import './menu.scss'
 import'./button.scss'
-import Desenhos from './../Desenhos/desenhos'
 import japan from './../../Img/ilustracao-japonesa-desenhada-a-mao-de-flores-de-cerejeira_23-2149601808-PhotoRoom 1.png'
 import grup1 from './../../Img/Group 13885.png'
 import japan2 from './../../Img/ilustracao-japonesa-desenhada-a-mao-de-petalas-de-cerejeira_23-2149601832-PhotoRoom 1.png'
